@@ -7,8 +7,8 @@ import org.junit.jupiter.api.BeforeAll;
 
 import static com.codeborne.selenide.Condition.selected;
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selectors.byText;
+import static com.codeborne.selenide.Selenide.*;
 
 public class Testdz {
 
@@ -46,7 +46,14 @@ public class Testdz {
         $(".react-datepicker__month-select").click();
         $(".react-datepicker__month-select").selectOption("June");
         $(".react-datepicker__year-select").click();
-        $(".react-datepicker__year-select").selectOption("2000");
+        $(".react-datepicker__month").$(byText("24")).click();
 
+        //Предмет
+        $("#subjectsInput").val("English").pressEnter();
+        //хобби
+        $("#hobbiesWrapper").findElement(byText("Sports")).click();
+        //картинка
+        $("#uploadPicture").uploadFromClasspath("тест.png");
+        //Адрес
     }
 }

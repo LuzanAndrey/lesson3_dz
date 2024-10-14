@@ -5,8 +5,7 @@ import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 
 
-import static com.codeborne.selenide.Condition.selected;
-import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -55,5 +54,23 @@ public class Testdz {
         //картинка
         $("#uploadPicture").uploadFromClasspath("тест.png");
         //Адрес
+        $("#currentAddress").setValue("улица Пятая");
+        //штат и город
+        $("#state").click();
+        $(byText("Haryana")).click();
+        $("#city").click();
+        $(byText("Karnal")).click();
+        $("#submit").click();
+        //проверка
+        $(".modal-body").shouldHave(text("Andrey Luzan"));
+        $(".modal-body").shouldHave(text("adluzluzan@mail.ru"));
+        $(".modal-body").shouldHave(text("1234567890"));
+        $(".modal-body").shouldHave(text("Male"));
+        $(".modal-body").shouldHave(text("24 June,2024"));
+        $(".modal-body").shouldHave(text("Sports"));
+        $(".modal-body").shouldHave(text("English"));
+        $(".modal-body").shouldHave(text("улица Пятая"));
+        $(".modal-body").shouldHave(text("Haryana Karnal"));
+        $(".modal-body").shouldHave(text("тест.png"));
     }
 }

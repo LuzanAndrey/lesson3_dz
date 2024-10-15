@@ -1,4 +1,4 @@
-import com.codeborne.selenide.SelenideElement;
+
 import org.junit.jupiter.api.Test;
 
 import com.codeborne.selenide.Configuration;
@@ -16,7 +16,6 @@ public class Testdz {
         Configuration.pageLoadStrategy = "eager";
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://demoqa.com";
-        Configuration.holdBrowserOpen = true;
     }
 
     @Test

@@ -14,7 +14,7 @@ public class selenideToJunit {
         Configuration.browserSize = "1920x1080";
     }
     @Test
-    void SelenideToJunitTest() {
+    void selenideToJunitTest() {
         // открыть страницу репозитория селенида
         open("https://github.com/selenide/selenide");
         //Перейти в WIKI

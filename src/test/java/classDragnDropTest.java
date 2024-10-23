@@ -25,7 +25,7 @@ public class classDragnDropTest {
         $("#column-a").shouldHave(text("B"));}
 
     @Test
-    void NewDragnDropTest() {
+    void newDragnDropTest() {
 
         // открыть главную страницу
         open("https://the-internet.herokuapp.com/drag_and_drop");

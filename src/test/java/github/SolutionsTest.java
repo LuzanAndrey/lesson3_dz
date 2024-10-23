@@ -15,7 +15,7 @@ public class SolutionsTest {
         Configuration.browserSize = "1920x1080";;
     }
     @Test
-    void SelenideToJunitTest() {
+    void newSolutionsTest() {
 
         open("https://github.com");
         //Навести курсор на Solutions

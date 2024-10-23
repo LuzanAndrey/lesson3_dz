@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
 
-public class SelenideToJunit {
+public class selenideToJunit {
     @BeforeAll
     static void beforeAll() {
         Configuration.browserSize = "1920x1080";
